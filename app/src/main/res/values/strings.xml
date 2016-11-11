@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Flashcard</string>
+    <string name="settingsButton">Settings</string>
+    <string name="createButton">Add New Flashcard</string>
+    <string name="subjectButton">GET STARTED</string>
+    <string name="title_activity_card">CardActivity</string>
+    <string name="optionsTest1">Test1</string>
+    <string name="title_activity_main_nav_tab">MainNavTab</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_create_flashcards">CreateFlashcards</string>
+
+</resources>
