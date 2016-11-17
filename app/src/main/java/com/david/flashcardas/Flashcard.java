@@ -1,7 +1,11 @@
 package com.david.flashcardas;
 
-class Flashcard implements Comparable<Flashcard>{
+/*
+@author Dave Elliott
+updated 16 Nov 2016, additional encapsulation and comments
+ */
 
+class Flashcard implements Comparable<Flashcard>{
 
     private long m_cardNumber = 1L;
     private String m_subject;
