@@ -1,70 +1,75 @@
 package com.david.flashcardas;
 
-public class Flashcard implements Comparable<Flashcard>{
+/*
+@author Dave Elliott
+updated 16 Nov 2016, additional encapsulation and comments
+ */
 
+class Flashcard implements Comparable<Flashcard>{
 
-    private long cardNumber = 1;
-    private String subject;
-    private String sideA;
-    private String sideB;
+    private long m_cardNumber = 1L;
+    private String m_subject;
+    private String m_sideA;
+    private String m_sideB;
 
-    public Flashcard(long cardNumber, String subject, String sideA, String sideB){
-        this.cardNumber = cardNumber;
-        this.subject = subject;
-        this.sideA = sideA;
-        this.sideB = sideB;
+    Flashcard(long cardNumber, String subject, String sideA, String sideB){
+        setCardNumber(cardNumber);
+        setSubject(subject);
+        setSideA(sideA);
+        setSideB(sideB);
     }
-    public Flashcard(String subject, String sideA, String sideB){
-        this.subject = subject;
-        this.sideA = sideA;
-        this.sideB = sideB;
-    }
-
-    public long getCardNumber(){
-        return cardNumber;
-    }
-
-    public void setCardNumber(long cardNumber) {
-        this.cardNumber = cardNumber;
+    Flashcard(String subject, String sideA, String sideB){
+        setSubject(subject);
+        setSideA(sideA);
+        setSideB(sideB);
     }
 
-    public String getSubject(){
-        return subject;
-    }
-    public void setSubject(String subject) {
-        this.subject = subject;
+    private long getCardNumber(){
+        return m_cardNumber;
     }
 
-    public String getSideA() {
-        return sideA;
+    private void setCardNumber(long cardNumber) {
+        m_cardNumber = cardNumber;
     }
 
-    public void setSideA(String sideA) {
-        this.sideA = sideA;
+    private String getSubject(){
+        return m_subject;
+    }
+    private void setSubject(String subject) {
+        m_subject = subject;
     }
 
-    public String getSideB() {
-        return sideB;
+    private String getSideA() {
+        return m_sideA;
     }
 
-    public void setSideB(String sideB) {
-        this.sideB = sideB;
+    private void setSideA(String sideA) {
+        m_sideA = sideA;
+    }
+
+    private String getSideB() {
+        return m_sideB;
+    }
+
+    private void setSideB(String sideB) {
+        m_sideB = sideB;
     }
 
     @Override
     public String toString() {
         return "Flashcard{" +
-                "cardNumber=" + cardNumber +
-                ", subject='" + subject + '\'' +
-                ", sideA='" + sideA + '\'' +
-                ", sideB='" + sideB + '\'' +
+                "cardNumber=" + getCardNumber() +
+                ", subject='" + getSubject() + '\'' +
+                ", sideA='" + getSideA() + '\'' +
+                ", sideB='" + getSideB() + '\'' +
                 '}';
     }
 
     @Override
-    public boolean equals(Object that) {
+    public boolean equals(Object obj) {
 
-        return this.getSubject().equals(that);
+        Flashcard that = (Flashcard)obj;
+        return this.getSubject().equals( that.getSubject() );
     }
 
     @Override
